@@ -44,7 +44,7 @@ pipeline{
             steps{
                 ws("tmp/"){
                     script{
-                        def exists = fileExists 'terraform_0.12.21_linux_amd64.zip'
+                        def exists = fileExists 'packer_1.5.4_linux_amd64.zip'
                         if(exists){
                             sh "unzip -o packer_1.5.4_linux_amd64.zip"
                             sh "sudo mv packer /bin"
