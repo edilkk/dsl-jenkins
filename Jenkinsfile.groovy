@@ -67,7 +67,8 @@ pipeline{
         }
         stage("Build Image"){
             steps{
-                sh "packer build updated/updated.json"
+                //sh "packer build updated/updated.json"
+                echo "HEllo"
             }
         }
     }
