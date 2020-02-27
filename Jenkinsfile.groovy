@@ -60,5 +60,15 @@ pipeline{
             }
             
         }
+        stage("Pull repo"){
+            steps{
+                git ("https://github.com/edilkk/packerdemo.git")
+            }
+        }
+        stage("Build Image"){
+            steps{
+                sh "packer build updated/updated.json"
+            }
+        }
     }
 }
